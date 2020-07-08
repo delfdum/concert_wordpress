@@ -38,10 +38,10 @@ Si rendu sous forme d'archive, veuillez noter que le dépôt sur Classroom sera 
 #### Pied de page /10 points
 
 1. 4 zones de widgets
-2. Pouvoir changer le texte du copyright ("© 2020 Descodeuses. Tous droits réservés").
-3. Menu secondaire
+//2. Pouvoir changer le texte du copyright ("© 2020 Descodeuses. Tous droits réservés").
+//3. Menu secondaire
 
-#### Page d'accueil (`front-page.php`) /20 points
+//#### Page d'accueil (`front-page.php`) /20 points
 
 1. Pouvoir changer l'image de fond.
 2. Titre : pouvoir modifier texte et taille.
@@ -54,7 +54,7 @@ Si rendu sous forme d'archive, veuillez noter que le dépôt sur Classroom sera 
 5. Zone de citation : pouvoir changer les textes et le style.
 Pour le style, utiliser un sélecteur pour le contrôle et les clés suivantes pour les choix : `custom-quote-style-1`, `custom-quote-style-2`, `custom-quote-style-3` (classes CSS).
 
-#### Page de blog /5 points
+//#### Page de blog /5 points
 
 1. Zone de widgets latérale.
 2. Case à cocher pour afficher ou non la barre latérale (ajouter la classe `hidden` si cochée)
