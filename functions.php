@@ -11,7 +11,7 @@ function delfConcert_setup() {
     )
   );
 
-  // active fonctionnalité WP qui prend en charge le logo personnalisé
+// active fonctionnalité WP qui prend en charge le logo personnalisé
   add_theme_support('custom-logo');
   add_theme_support('post_thumbnails');
 }
