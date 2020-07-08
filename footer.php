@@ -35,11 +35,11 @@
   </section>
 
   <section class="footer-infos container">
-
+<!-- copyright/date/name-->
     <div class="copyright">
       <p>© <?php the_time('Y'); ?> <?php bloginfo('name'); ?>. Tous droits réservés.</p>
     </div>
-
+<!-- menu mis dans footer, différent de celui de l'en-tête ET dans la maquette, ce n'est pas les réseaux sociaux-->
     <div class="social-medias">
       <nav class="navigation navigation-bottom">
         <?php
