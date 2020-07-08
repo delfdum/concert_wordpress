@@ -962,10 +962,13 @@ body {
 	margin: 3rem auto;
 }
 
-.custom-blocks,
 .custom-presentation {
 	display: flex;
 	flex-wrap: wrap;
+}
+
+.custom-blocks {
+	display: flex;
 }
 
 .custom-presentation-infos {
