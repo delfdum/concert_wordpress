@@ -4,7 +4,7 @@
       <h2><?php esc_html_e( 'Erreur 404', 'delfConcert' ); ?></h2>
       <h3><?php esc_html_e( 'La page que vous cherchez n\'existe pas.', 'delfConcert' ); ?></h3>
 
-<!-- Bouton-->
+<!-- Bouon-->
 <!--!!!!!!!!!!!!! sous 2 formes celle dynamic marche pas, à revoir-->
 
     <a href="<?php echo get_theme_mod('fp_button_url_3') ?>">
@@ -12,7 +12,7 @@
       <button type="button" class="call-to-action"><?php echo get_theme_mod('fp_button_text_3') ?></button>
     </a>
 
-    <a href="front-page.html">
+    <a href="front-page.php">
       <button type="button" class="call-to-action">
         Retourner à l'accueil du site
       </button>
