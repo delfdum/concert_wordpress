@@ -53,18 +53,16 @@
         <?php the_content(); ?>
       </section>
 
-<!-- PAS ENCORE FAIT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+<!-- partie auteur-->
       <section class="author-card">
         <section class="author-thumbnail">
-          <img src="./assets/images/logo-rock-band.png" alt="Photo de l'auteur" class="author-picture">
+<!-- Afficher l'avatar de l'auteur -->
+         <?php echo get_avatar(get_the_author_meta('ID')); ?>
         </section>
         <section class="author-metadata">
-          <h3 class="author-meta-name">Ada Lovelace</h3>
-          <p class="author-meta-description">
-            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-            aut fugit, sed quia consequuntur magni dolores eos qui ratione
-            voluptatem sequi nesciunt.
-          </p>
+<!-- Afficher nom et présentation de l'auteur -->
+          <h3 class="author-meta-name"><?php the_author(); ?></h3>
+          <p class="author-meta-description"><?php the_author_meta('description'); ?></p>
         </section>
       </section>
 
