@@ -4,25 +4,19 @@
       <h2><?php esc_html_e( 'Erreur 404', 'delfConcert' ); ?></h2>
       <h3><?php esc_html_e( 'La page que vous cherchez n\'existe pas.', 'delfConcert' ); ?></h3>
 
-<!-- Bouon-->
-<!--!!!!!!!!!!!!! sous 2 formes celle dynamic marche pas, à revoir-->
+  <!-- moteur de recherche -->
+      <?php get_search_form(); ?>
 
-    <a href="<?php echo get_theme_mod('fp_button_url_3') ?>">
-      <!-- texte bouton 'Retouner à l'accueil du site' -->
-      <button type="button" class="call-to-action"><?php echo get_theme_mod('fp_button_text_3') ?></button>
+<!-- bouton qui ramène à la page accueil -->
+     <a href="<?php echo get_bloginfo('url') ?>">
+       <button type="button" class="call-to-action">
+         Retourner à l'accueil du site
+       </button>
     </a>
 
-    <a href="front-page.php">
-      <button type="button" class="call-to-action">
-        Retourner à l'accueil du site
-      </button>
-    </a>
-
-
-    <?php get_search_form(); ?>
-
-
-
+<!-- A SAVOIR lien qui ramène à la 'racine du site' + une page particulière
+<a href="<?php //echo get_bloginfo('url') . '/blog'; ?>">
+ -->
 
     </section>
   </main>
