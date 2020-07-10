@@ -969,6 +969,7 @@ body {
 
 .custom-blocks {
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .custom-presentation-infos {
