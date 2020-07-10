@@ -21,8 +21,7 @@
 <body <?php body_class(); ?>>
   <header class="site-header">
 
-<!-- le logo personnalisé si existant, sinon
-          on affiche le nom du site. -->
+<!-- le logo personnalisé si existant, sinon on affiche le nom du site. -->
         <div class="site-branding">
           <?php if(has_custom_logo()) :
             the_custom_logo();
@@ -46,7 +45,7 @@
         wp_nav_menu(
           array(
             'theme_location'  => 'primary',
-            'container' => false
+            'container' => false // évite que WP engloabe le <ul> d'une balise <div>
           )
         );
       ?>
