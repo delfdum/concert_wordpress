@@ -6,9 +6,8 @@
 // la liste des commentaires de l'article
     wp_list_comments();
 
-// affiche une pagination pour les commentaires si les réglages du site
-// le permettent
-// Dans wp: (Tableau de bord > Réglages > Commentaires > Diviser les commentaires en pages, avec X commentaires par page)
+// Pagination pour les commentaires MAIS ATTENTION régler dans wp le nombre d'affichage des commentaires.
+// Dans Tableau de bord > Réglages > Commentaires > Diviser les commentaires en pages, avec X commentaires par page)
     echo '<div class="comments-pagination">';
     paginate_comments_links(
       array(
