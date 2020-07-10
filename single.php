@@ -2,7 +2,7 @@
 <?php get_header(); ?>
 
   <main class="container site-content">
-
+<!-- Condition: afficher articles si il y a -->
     <?php if(have_posts()) : ?>
     <?php while(have_posts()) : the_post(); ?>
 
@@ -10,11 +10,13 @@
       <header class="entry-header">
         <section class="entry-metadata">
           <section class="entry-data">
-<!-- auteur -->
-            <h4 class="author"><a href="<?php get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?></a></h4>
+<!-- nom auteur + lien vers la page des articles écrits par l'auteur -->
+            <h4 class="author">
+            <a href="<?php get_author_posts_url(get_the_author_meta('ID')); ?>">
+            <?php the_author(); ?></a></h4>
 <!-- date de publication -->
             <h6 class="publish-date"><?php the_time('d M Y') ?></h6>
-<!-- les actuaciltés !!!!!!!!!!!!!!!!!!!!!!! -->
+<!-- les categories de chaque articles -->
             <?php
               $categories = get_the_category();
               $separator = " ";
