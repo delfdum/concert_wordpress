@@ -1,20 +1,14 @@
 <!--
 Modèle des articles (blog - liste des articles) : index.php
-
-On sépare l'en-tête et le corps de la page en créant un fichier header.php
-L'intérêt du fichier header.php est de factoriser le code de l'en-tête.
-C'est-à-dire éviter de répéter le même bout code dans plusieurs fichiers
-différents ayant le même en-tête.
-On appelle donc la fonction get_header(); pour inclure ce fichier header.php.
 -->
 <?php get_header(); ?>
 
   <main class="container site-content">
     <section class="main-content">
-
+<!-- condition si articles il y a: -->
       <?php if(have_posts()) : ?>
       <?php while(have_posts()) : the_post(); ?>
-
+<!-- affichage vignette si il y a et avec taille et les classes CSS -->
       <article class="entry post">
         <header class="entry-header">
           <?php if(has_post_thumbnail()) : ?>
@@ -26,6 +20,7 @@ On appelle donc la fonction get_header(); pour inclure ce fichier header.php.
               <h6 class="publish-date"><?php the_time('d M Y'); ?></h6>
 
               <?php
+    //tableau contenant les catégories de l'article
                 $categories = get_the_category();
                 $separator = " ";
                 $output = '';
@@ -40,7 +35,7 @@ On appelle donc la fonction get_header(); pour inclure ce fichier header.php.
 
             </section>
 
-<!-- affichage dynamique des titres de chaque article  -->
+<!-- affichage lien et titre de l'article  -->
             <h2 class="entry-title">
               <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </h2>
