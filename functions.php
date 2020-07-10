@@ -1,4 +1,11 @@
 <?php
+// fonction pour lier le js:
+function theme_js(){
+    wp_enqueue_script( 'main',
+    get_template_directory_uri() . '/assets/js/main.js',
+    array() );
+    }
+add_action( 'wp_enqueue_scripts', 'theme_js' );
 
 // fonction déclaration menus personnalisés
 function delfConcert_setup() {
