@@ -75,6 +75,7 @@ function delfConcert_init_widgets() {
     )
   );
 
+//Enregister les zones de widgets de la barre latérale
   register_sidebar(
     array(
       'id'  => 'widgets-sidebar',
