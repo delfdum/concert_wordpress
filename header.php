@@ -70,22 +70,21 @@
 
 
 <!-- affiche menu droite  -->
-    <nav class="navigation navigation-aside">
-      <ul>
-        <li class="search-toggle">
-          <a href="#"><i class="fas fa-search"></i>
-          </a>
-        </li>
-        <?php if(!is_woocommerce()) : ?>
-        <li>
-           <a href="<?php echo wc_get_cart_url() ?>">
-            <i class="fas fa-shopping-cart"></i>
-            <span class="count cart-counter"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
-          </a>
-        </li>
-        <?php endif; ?>
-      </ul>
-    </nav>
+<nav class="navigation navigation-aside">
+<ul>
+<li class="search-toggle">
+  <a href="#"><i class="fas fa-search"></i>
+  </a>
+</li>
+<li>
+  <a href="#">
+    <i class="fas fa-shopping-cart"></i>
+    <span class="count cart-counter">0</span>
+  </a>
+</li>
+</ul>
+</nav>
+
     <section class="search-popup">
       <?php
        get_search_form();
