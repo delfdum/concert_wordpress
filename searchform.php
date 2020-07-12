@@ -1,6 +1,6 @@
 <!-- l'input recherche -->
 <form id="searchform" method="get" action="<?php
- if (empty($_GET['s']) || $_GET['s'] === '' || !isset($_GET['s'])) {
+ if (!isset($_GET['s']) || $_GET['s'] === '' || empty($_GET['s'])) {
      echo esc_url(home_url('/404'));
  } else {
     echo esc_url(home_url('/'));
