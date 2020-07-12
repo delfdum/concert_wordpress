@@ -4,8 +4,6 @@
       <h2><?php esc_html_e( 'Erreur 404', 'delfConcert' ); ?></h2>
       <h3><?php esc_html_e( 'La page que vous cherchez n\'existe pas.', 'delfConcert' ); ?></h3>
 
-  <!-- moteur de recherche -->
-      <?php get_search_form(); ?>
 
 <!-- bouton qui ramène à la page accueil -->
      <a href="<?php echo get_bloginfo('url') ?>">
@@ -20,5 +18,4 @@
 
     </section>
   </main>
-  <?php get_sidebar(); ?>
   <?php get_footer(); ?>
