@@ -76,19 +76,20 @@
           <a href="#"><i class="fas fa-search"></i>
           </a>
         </li>
+        <?php if(!is_woocommerce()) : ?>
         <li>
-          <a href="#">
+           <a href="<?php echo wc_get_cart_url() ?>">
             <i class="fas fa-shopping-cart"></i>
-            <span class="count cart-counter">0</span>
+            <span class="count cart-counter"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
           </a>
         </li>
+        <?php endif; ?>
       </ul>
     </nav>
     <section class="search-popup">
-      <form class="search-form" action="index.html" method="post">
-        <input type="text" name="search" value="" placeholder="Tapez quelque chose...">
-        <input type="submit" name="submit" value="Rechercher">
-      </form>
+      <?php
+       get_search_form();
+       ?>
     </section>
 
   </header>
