@@ -2,7 +2,7 @@
 <?php get_header(); ?>
 
   <main class="container site-content">
-<!-- Condition: afficher articles si il y a -->
+<!-- Condition boucle: afficher articles si il y a -->
     <?php if(have_posts()) : ?>
     <?php while(have_posts()) : the_post(); ?>
 
@@ -64,7 +64,10 @@
         <section class="author-metadata">
 <!-- Afficher nom et présentation de l'auteur -->
           <h3 class="author-meta-name"><?php the_author(); ?></h3>
-          <p class="author-meta-description"><?php the_author_meta('description'); ?></p>
+          <p class="author-meta-description"><?php the_author_meta('description'); ?>
+            <a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
+  				<?php printf( __( 'Voir les articles de %s', 'delfConcert' ), get_the_author() ); ?>
+  			</a></p>
         </section>
       </section>
 
