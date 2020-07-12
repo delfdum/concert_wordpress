@@ -18,13 +18,16 @@ function delfConcert_setup() {
     )
   );
 
-// active fonctionnalité WP qui prend en charge le logo personnalisé
+// "mon thème supporte" les logos, menu..
+//active fonctionnalité WP qui prend en charge le logo personnalisé
   add_theme_support('custom-logo');
   add_theme_support('post_thumbnails');
+  add_theme_support('menus');
 }
 
 add_action('after_setup_theme', 'delfConcert_setup');
 
+//////////////////////////////////////
 // fonction enregistrement zones de widgets
 function delfConcert_init_widgets() {
   register_sidebar(
@@ -87,6 +90,7 @@ function delfConcert_init_widgets() {
       'after_title' => '</h3>'
     )
   );
+
 }
 
 add_action('widgets_init', 'delfConcert_init_widgets');
