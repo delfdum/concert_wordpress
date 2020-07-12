@@ -2,34 +2,6 @@
 
 function delfConcert_customize_register($wp_customize) {
 
-  $wp_customize->add_section(
-  'banner',
-    array(
-      'title'         => 'Bannière',
-      'description'   => 'Description de la section'
-    )
-  );
-
-  $wp_customize->add_setting(
-  'banner_image',
-    array(
-      'default'       => get_template_directory() . '/assets/images/alex-bracken-unsplash.jpg',
-      'type'          => 'theme_mod'
-    )
-  );
-
-  $wp_customize->add_control(
-    new WP_Customize_Image_control(
-      $wp_customize,
-      'banner_image',
-      array(
-        'label'      => 'Image de fond',
-        'section'    => 'banner',
-        'setting'    => 'banner_image'
-      )
-    )
-  );
-
 /////////////////////////////////////////////
 // pour la page front-page.php-1ere partie
 
@@ -43,8 +15,8 @@ function delfConcert_customize_register($wp_customize) {
   $wp_customize->add_section(
     'fp_container',
     array(
-      'title'         => 'Conteneur image',
-      'description'   => 'Réglages du conteneur de la page d\'accueil principale',
+      'title'         => 'Bannière image principale',
+      'description'   => 'Réglages du conteneur image de la page d\'accueil principale',
       'panel'         => 'front_page'
     )
   );
@@ -213,7 +185,7 @@ function delfConcert_customize_register($wp_customize) {
     'custom_image',
     array(
       'title'       => 'Image partie actualités',
-      'description' => 'Réglages du conteneur de la page d\'accueil principale',
+      'description' => 'Réglages de la 2e image de la page d\'accueil principale',
       'panel'       => 'front_page'
     )
   );
@@ -767,7 +739,7 @@ $wp_customize->add_section(
    array(
      'title'       => 'Zone de widgets latérale',
      'description' => 'Masquer la zone de widgets latérale',
-     'panel'       => 'front_page'
+     
    )
  );
 
@@ -820,95 +792,33 @@ $wp_customize->add_section(
 
 
 
-
-//BOUTON PAGE 4040
+  // Texte dans input moteur de recherche
   $wp_customize->add_section(
-    'fp_button_3',
+  'barre de recherche',
     array(
-      'title'       => 'Bouton',
-      'description' => 'Bouton Retourner à l\'accueil du site',
-      'panel'       => 'front_page'
+      'title'         => 'barre de recherche',
+      'description'   => 'Personnalisation texte barre de recherche'
     )
   );
 
   $wp_customize->add_setting(
-    'fp_button_text_3',
+    'search_text',
     array(
-      'default' => 'Retourner à l\'accueil du site',
-      'type'    => 'theme_mod'
+      'default'      => 'Votre recherche',
+      'type'         => 'theme_mod'
     )
   );
 
   $wp_customize->add_control(
-    'fp_button_text_3',
+    'search_text',
     array(
-      'label'       => 'Button',
-      'description' => 'Texte du bouton',
-      'section'     => 'fp_button_3',
-      'setting'     => 'fp_button_text',
-      'type'        => 'text'
+      'label'        => 'Search_text',
+      'description'  => 'Texte du champ de recherche',
+      'section'      => 'barre de recherche',
+      'setting'      => 'search_text',
+      'type'         => 'text'
     )
   );
-
-  $wp_customize->add_setting(
-    'fp_button_url_3',
-    array(
-      'default' => '',
-      'type'    => 'theme_mod'
-    )
-  );
-
-  $wp_customize->add_control(
-    'fp_button_url_3',
-    array(
-      'label'       => 'Lien',
-      'description' => 'Adresse URL du bouton',
-      'section'     => 'fp_button_3',
-      'setting'     => 'fp_button_url',
-      'type'        => 'url'
-    )
-  );
-
-  $wp_customize->add_setting(
-    'fp_button_style_3',
-    array(
-      'default' => 'btn-style-2',
-      'type'    => 'theme_mod'
-    )
-  );
-
-  $wp_customize->add_control(
-    'fp_button_style_3',
-    array(
-      'label'       => 'Style',
-      'description' => 'Style du bouton',
-      'section'     => 'fp_button_3',
-      'type'        => 'radio',
-      'choices'     => array(
-        'btn-style-1' => 'Style 1',
-        'btn-style-2' => 'Style 2',
-        'btn-style-3' => 'Style 3'
-      )
-    )
-  );
-
-
-
-  $wp_customize->add_section( 'delfConcert_search_options', array(
-		'panel'     => 'delfConcert_theme_options',
-		'title'     => esc_html__( 'Search Options', 'delfConcert' ),
-	) );
-
-	delfConcert_register_option( $wp_customize, array(
-			'name'              => 'delfConcert_search_text',
-			'default'           => esc_html__( 'Search', 'delfConcert' ),
-			'sanitize_callback' => 'sanitize_text_field',
-			'label'             => esc_html__( 'Search Text', 'delfConcert' ),
-			'section'           => 'delfConcert_search_options',
-			'type'              => 'text',
-		)
-	);
-
 
 
 
